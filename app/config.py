@@ -33,8 +33,8 @@ class Config(object):
     MAIL_PASSWORD = config('MAIL_PASSWORD', default='@admin123')
     MAIL_DEFAULT_SENDER = config('MAIL_DEFAULT_SENDER', default= os.environ.get('MAIL_DEFAULT_SENDER','admin@mondeleztnt.in') )
     # This will create a file in <app> FOLDER
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root@127.0.0.1:3306/srctrac'
-    # SQLALCHEMY_DATABASE_URI = 'mysql://admin:Romil123@mondelez.c3uhktkf90fd.ap-south-1.rds.amazonaws.com:3306/mts'
+    # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root@127.0.0.1:3306/srctrac'
+    SQLALCHEMY_DATABASE_URI = 'mysql://admin:T643^$#nji@srctrac-dev.cjtqgyjbxwr3.ap-south-1.rds.amazonaws.com:3306/srctrac'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB
 
