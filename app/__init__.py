@@ -75,6 +75,9 @@ def create_app():
     from app.resources.sample import SampleResource
     api.add_resource(SampleResource, '/sample')
 
+    # -------API registration for permission resource
+    from app.resources.authentication import LoginResource
+    api.add_resource(LoginResource, '/login')
 
     # Register other API resources here
 
