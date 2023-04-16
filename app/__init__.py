@@ -90,6 +90,11 @@ def create_app():
     api.add_resource(SalesOrderListResource, '/sorders')
     api.add_resource(SalesOrderResource, '/sorder')
 
-    # Register other API resources here
+
+    # -------API registration for user role mapping
+    from app.resources.user_role_mapping import UserRoleMappingResource
+    api.add_resource(UserRoleMappingResource, '/urmap')
+
+    
 
     return app
