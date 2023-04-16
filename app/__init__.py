@@ -79,6 +79,17 @@ def create_app():
     from app.resources.authentication import LoginResource
     api.add_resource(LoginResource, '/login')
 
+
+    # -------API registration for serial number resource
+    from app.resources.mapping import SerialListResource, SerialMappingResource
+    api.add_resource(SerialListResource, '/senumbers')
+    api.add_resource(SerialMappingResource, '/semapping')
+
+    # -------API registration for sales order resouce
+    from app.resources.sales_order import SalesOrderListResource, SalesOrderResource
+    api.add_resource(SalesOrderListResource, '/sorders')
+    api.add_resource(SalesOrderResource, '/sorder')
+
     # Register other API resources here
 
     return app
