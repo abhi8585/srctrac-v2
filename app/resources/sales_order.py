@@ -68,9 +68,14 @@ class SalesOrderListResource(Resource):
         if not request.args.get('order_date'):
             return dict(status="failed",message= "No order date provided"), 400
         else:
-            so_numbers = [dict(so_numbers="QDSON"+ str(i), so_id=str(i)) for i in range(0,10)]
-            return {"so_numbers": so_numbers}, 200
-
+            order_date = request.args.get('order_date')
+            order_date = str("".join(order_date.split("-")))
+            print(order_date)
+            if order_date == "20230416":
+                so_numbers = [dict(so_numbers="QDSON"+ str(i), so_id=str(i)) for i in range(0,10)]
+                return {"so_numbers": so_numbers}, 200
+            else:
+                return {"so_numbers" : []}, 200
 
 class SalesOrderResource(Resource):
     def get(self):
